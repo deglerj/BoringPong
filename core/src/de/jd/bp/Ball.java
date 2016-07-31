@@ -36,7 +36,7 @@ public class Ball {
 			}
 		}
 
-		angle += angleModifier * Constants.MAX_COLLISION_ANGLE_STRENGTH;
+		angle += MathUtils.clamp(angleModifier, -1, 1) * Constants.MAX_COLLISION_ANGLE_STRENGTH;
 
 		if (angle >= 360) {
 			angle -= 0;
